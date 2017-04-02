@@ -1,0 +1,103 @@
+#title, #mainContent, .btn, .btnNav, footer {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#title {
+    margin: 0 auto;
+    align-content: center;
+    height: 50%;
+}
+
+#mainContent {
+    background-color: blue;
+    color: #FFFFFF;
+    padding: 10px;
+    text-align: center;
+}
+
+#wrapper {	
+    margin-left: auto;
+	margin-right: auto;
+    background-color: aquamarine;
+	width: 90%;
+	min-width: 960px;
+	box-shadow: 10px 10px 10px #000000;
+}
+
+.btn {
+    background-color: #E86900;
+    border: none;
+    color: #FFFFFF;
+    padding: 25px 25px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    margin: 5px 5px;
+    width: 250px;
+	height: 250px;
+    -moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+}
+
+.btnIcon {
+    width: 75%;
+}
+
+.btnIcon2 {
+    width: 50%;
+}
+
+.btnNav {
+    background-color: #FF2E2E;
+    border: none;
+    font-weight: 700;
+    color: #FFFFFF;
+    padding: 25px 25px;
+    width: 150px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    margin: 5px 5px;
+    -moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+}
+
+body {
+    background-color:aqua;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    
+}
+
+footer {
+    background-color: #FF00D8;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px;
+}
+
+header { 
+    background-image: url(../images/titleBackground.png);
+    background-position: center;
+    text-align: center;
+    height: auto;  
+}
+
+
+nav {
+    background-color: #1BE000;
+    padding: 10px;
+    text-align: center;
+}
+
+table {
+    margin: 0 auto;
+}
+
+th {
+    padding: 8px;
+}
