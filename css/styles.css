@@ -5,7 +5,6 @@
 #title {
     max-width: 100%;
     align-content: center;
-    height: 50%;
 }
 
 #mainContent {
@@ -22,6 +21,7 @@
 	width: 95%;
 	min-width: 960px;
 	box-shadow: 10px 10px 10px #000000;
+    
 }
 
 .btn {
@@ -39,12 +39,6 @@
     -moz-border-radius: 15px;
 	-webkit-border-radius: 15px;
 	border-radius: 15px;
-}
-
-.btnGames {
-    max-width: 75%;
-    position: relative;
-    bottom: -1.5em;
 }
 
 .btnIcon {
@@ -113,5 +107,13 @@ table {
 }
 
 th {
-    padding: 8px;
+    padding: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+   
+}
+
+@media only screen and (max-width: 480px) {
+
 }
