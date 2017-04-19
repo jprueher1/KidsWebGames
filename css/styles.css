@@ -1,3 +1,4 @@
+ccccccfngdlnicngjrlfujlfblhhfkkdglbknvgbnnil
 #title, #mainContent, .btn, img, footer {
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -24,6 +25,7 @@
 }
 
 .btn {
+    position: relative;
     background-color: #E86900;
     border: none;
     color: #FFFFFF;
@@ -41,6 +43,9 @@
 }
 
 .btnIcon {
+    position: relative;
+    top: 0px;
+    bottom: 0px;
     max-width: 75%;
     
 }
@@ -51,6 +56,10 @@
 
 .btnIcon3 {
     max-width: 100%;
+}
+
+.btnIcon4 {
+    max-width: 40%;
 }
 
 .btnNav {
@@ -72,6 +81,10 @@
 
 .pageTitle {
     height: 85px;
+}
+
+.pageTitle2 {
+    max-height: 185px;
 }
 
 body {
@@ -111,33 +124,6 @@ th {
     padding: 5px;
 }
 
-#gamePlay {
-    border: 1px solid red;
-    text-align: center;
-    margin: 0 auto;
-    position: relative;
-    
-    
-}
-
-
-#problem1, #problem2, #operator {
-    font-size: 72px;
-   
-}
-
-
-#userAnswer {
-    width: 240px;
-    height: 80px;
-    border-radius: 5px;
-    font-size: 72px;
-}
-
-
-
-
-
 @media only screen and (max-width: 500px) {
     #title {
        height: 75px; 
@@ -157,6 +143,11 @@ th {
     
     .pageTitle {
         height: 50px;
+        max-width: 100%;
+    }
+    
+    .pageTitle2 {
+        height: 100px;
         max-width: 100%;
     }
     
