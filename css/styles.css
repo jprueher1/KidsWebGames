@@ -1,4 +1,21 @@
-ccccccfngdlnicngjrlfujlfblhhfkkdglbknvgbnnil
+#gamePlay {
+    border: 1px solid red;
+    text-align: center;
+    margin: 0 auto;
+    position: relative; 
+}
+
+#mainContent {
+    background-color: blue;
+    color: #FFFFFF;
+    padding: 10px;
+    text-align: center;
+}
+
+#problem1, #problem2, #operator {
+    font-size: 72px;  
+}
+
 #title, #mainContent, .btn, img, footer {
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -8,11 +25,11 @@ ccccccfngdlnicngjrlfujlfblhhfkkdglbknvgbnnil
     align-content: center;
 }
 
-#mainContent {
-    background-color: blue;
-    color: #FFFFFF;
-    padding: 10px;
-    text-align: center;
+#userAnswer {
+    width: 240px;
+    height: 80px;
+    border-radius: 5px;
+    font-size: 72px;
 }
 
 #wrapper {   
