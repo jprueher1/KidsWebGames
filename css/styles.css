@@ -111,6 +111,33 @@ th {
     padding: 5px;
 }
 
+#gamePlay {
+    border: 1px solid red;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    
+    
+}
+
+
+#problem1, #problem2, #operator {
+    font-size: 72px;
+   
+}
+
+
+#userAnswer {
+    width: 240px;
+    height: 80px;
+    border-radius: 5px;
+    font-size: 72px;
+}
+
+
+
+
+
 @media only screen and (max-width: 500px) {
     #title {
        height: 75px; 

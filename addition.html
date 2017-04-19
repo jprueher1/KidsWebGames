@@ -4,7 +4,7 @@
 	<title>Kids Web Games</title>
 	<meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <!--[if lt IE 9]>
     <script
     src="http://html15shim.google.code/svn/trunk/html15.js"></script>
@@ -23,17 +23,33 @@
                 <tr>
                     <th><a href="construction.html" class="btn"><p>1st Grade</p>
                         <img class="btnIcon" src="images/1stGradeAdd.png" alt="First Grade"></a>
+                        <input type="radio" name="grades" id="firstGrade">
                     </th>
                     <th><a href="construction.html" class="btn"><p>2nd Grade</p>
                         <img class="btnIcon" src="images/2ndGradeAdd.png" alt="Second Grade"></a>
+                        <input type="radio" name="grades"id="secondGrade">
                     </th>
                     <th><a href="construction.html" class="btn"><p>3rd Grade</p>
                         <img class="btnIcon" src="images/3rdGradeAdd.png" alt="Third Grade"></a>
+                        <input type="radio" name="grades" id="thirdGrade">
                     </th>
                 </tr>
             </table>
         </div>
+        <div id="gamePlay">
+            <div id="problem1">?</div>
+            <div id="operator">+</div>
+            <div id="problem2">?</div>
+            
+            <input id="userAnswer" type="number">
+            <div id="answerArea">
+                <input type="submit" id="answerBtn">
+            </div>
+            <h3 id="feedbackOutput"></h3>
+            
+        </div>
         <footer>Copyright &copy; 2017 Kids Web Games</footer>
+        <script src="js/addition.js"></script>
     </div>
 
 </body>
