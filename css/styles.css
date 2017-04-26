@@ -1,8 +1,28 @@
+#answerArea {
+    padding: 10px;
+}
+
+#answerBtn {
+    width: 100px;
+    height: 50px;
+    font-size: 25px;
+}
+
+#answerBtn:hover {
+    width: 105px;
+    height: 55px;
+    font-size: 25px;
+}
+
+#feedbackOutput {
+    font-size: 35px;
+}
+
 #gamePlay {
-    border: 1px solid red;
     text-align: center;
     margin: 0 auto;
-    position: relative; 
+    height: 500px;
+    width: 300px;
 }
 
 #mainContent {
@@ -13,11 +33,25 @@
 }
 
 #problem1, #problem2, #operator {
-    font-size: 72px;  
+    font-size: 65px;  
 }
 
-#title, #mainContent, .btn, img, footer {
-    font-family: Arial, Helvetica, sans-serif;
+#problem1 {
+    position: relative;
+    right: 25px;
+    float: right;
+}
+
+#problem2 {
+    position: relative;
+    right: 25px;
+    float: right;
+}
+
+#operator {
+    float: left;
+    left: 25px;
+    color: #67ba06;
 }
 
 #title {
@@ -27,9 +61,12 @@
 
 #userAnswer {
     width: 240px;
-    height: 80px;
+    height: 100px;
     border-radius: 5px;
     font-size: 72px;
+    border-top: 10px solid #67ba06;
+    text-align: right;
+    font-size: 63px;
 }
 
 #wrapper {   
@@ -44,7 +81,6 @@
 .btn {
     position: relative;
     background-color: #E86900;
-    border: none;
     color: #FFFFFF;
     padding: 25px 25px;
     text-align: center;
@@ -63,8 +99,7 @@
     position: relative;
     top: 0px;
     bottom: 0px;
-    max-width: 75%;
-    
+    max-width: 75%;  
 }
 
 .btnIcon2 {
@@ -96,6 +131,20 @@
 	border-radius: 15px;
 }
 
+.btnNav:hover {
+    background-color: #6600FF;
+}
+
+.btnRadio input[type=radio] {
+  display: none;
+}
+
+
+.btnRadio label:hover{
+    background-color: #FFA500;
+    cursor: pointer;
+}
+
 .pageTitle {
     height: 85px;
 }
@@ -107,8 +156,7 @@
 body {
     background-color: #00ffff;
     padding-top: 20px;
-    padding-bottom: 30px;
-    
+    padding-bottom: 30px;  
 }
 
 footer {
@@ -125,6 +173,9 @@ header {
     height: auto;  
 }
 
+html * {
+   font-family: Arial, Helvetica, sans-serif !important;
+}
 
 nav {
     background-color: #1BE000;
@@ -141,7 +192,51 @@ th {
     padding: 5px;
 }
 
+th input[type="radio"]:checked+label {
+    border: 5px solid white;  
+}
+
 @media only screen and (max-width: 500px) {
+    #answerBtn {
+        width: 65px;
+        height: 25px;
+        font-size: 15px;
+    }
+
+    #answerBtn:hover {
+        width: 70px;
+        height: 30px;
+        font-size: 15px;
+    }
+    
+    #feedbackOutput {
+        font-size: 15px;
+    }
+    
+    #userAnswer {
+        border-top: 5px solid #67ba06;  
+        width: 150px;
+        height: 50px;
+        font-size: 25px;
+    }
+    
+    #gamePlay {
+        text-align: center;
+        margin: 0 auto;
+        height: 218px;
+        width: 180px;
+    }
+    
+    #operator {
+        float: left;
+        left: 25px;
+        color: #67ba06;
+    }
+    
+    #problem1, #problem2, #operator {
+        font-size: 25px;
+    }
+    
     #title {
        height: 75px; 
     }
@@ -174,6 +269,6 @@ th {
     }
         
     th {
-        padding: 2px;
+        padding: 0px;
     }
 }

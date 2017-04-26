@@ -36,8 +36,8 @@ var answerBtn = document.getElementById("answerBtn");
 var userGuess = 0;
 var output = document.getElementById("feedbackOutput");
 
-var correctAnswerMsg = ["Awesome!", "You're really good at this!", "Wonderful!", "You sure                          know your math"];
-var wrongAnswerMsg = ["Keep trying, you'll get it", "So close, try again!", "Think hard,                          you'll get it!"];
+var correctAnswerMsg = ["Awesome!", "You're really good at this!", "Wonderful!", "You sure know your math!"];
+var wrongAnswerMsg = ["Keep trying, you'll get it", "So close, try again!", "Think hard, you'll get it!"];
 
 firstGradeRadio.onchange = function() {
     if(firstGradeRadio.checked) {
