@@ -15,10 +15,16 @@ function getNextProblem(){
     firstNum = getRandomInt(min, max);
     secondNum = getRandomInt(min,max);
     
+    
+    while(firstNum < secondNum) {
+        secondNum = getRandomInt(min,max);
+    }
+    
     num1.innerHTML = firstNum;
     num2.innerHTML = secondNum;
 }
 
+// initialize variables
 var currentScore = 0;
 var question1 = 0;
 var question2 = 0;
@@ -33,8 +39,8 @@ var secondGradeRadio = document.querySelector("#secondGrade");
 var thirdGradeRadio = document.querySelector("#thirdGrade");
 var answer = 0;
 var answerBtn = document.getElementById("answerBtn");
-var userGuess = 0;
 var inputArea = document.getElementById("userAnswer");
+var userGuess = 0;
 var output = document.getElementById("feedbackOutput");
 
 var correctAnswerMsg = ["Awesome!", "You're really good at this!", "Wonderful!", "You sure                          know your math"];
@@ -45,8 +51,7 @@ firstGradeRadio.onchange = function() {
         min = 0;
         max = 10;
         
-        firstNum = getRandomInt(min, max);
-        secondNum = getRandomInt(min, max);
+        getNextProblem();
         
         num1.innerHTML = firstNum;
         num2.innerHTML = secondNum;
@@ -58,8 +63,7 @@ secondGradeRadio.onchange = function() {
         min = 10;
         max = 100;
         
-        firstNum = getRandomInt(min, max);
-        secondNum = getRandomInt(min, max);
+        getNextProblem();
         
         num1.innerHTML = firstNum;
         num2.innerHTML = secondNum;
@@ -71,8 +75,7 @@ thirdGradeRadio.onchange = function() {
         min = 100;
         max = 1000;
         
-        firstNum = getRandomInt(min, max);
-        secondNum = getRandomInt(min, max);
+        getNextProblem();
         
         num1.innerHTML = firstNum;
         num2.innerHTML = secondNum;
@@ -83,25 +86,15 @@ thirdGradeRadio.onchange = function() {
 answerBtn.onclick = function(e){ 
     
     userGuess = Number(document.getElementById("userAnswer").value);
-    answer = firstNum + secondNum;
+    answer = firstNum - secondNum;
     
-    console.log(answer);
-   if(checkAnswer(userGuess, answer)) {
+    if(checkAnswer(userGuess, answer)) {
        output.innerHTML = correctAnswerMsg[getRandomInt(0, correctAnswerMsg.length -1)]
        currentScore+= 10;
        getNextProblem();
-   } else {
+    } else {
        output.innerHTML = wrongAnswerMsg[0, wrongAnswerMsg.length -1];
-   }
-    inputArea.innerHTML = "";
+    }
     
+    inputArea.value = "";
 }   
-    
-
-
-
-
-
-
-
-
