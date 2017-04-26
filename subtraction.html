@@ -18,22 +18,48 @@
         </nav>
         <div id="mainContent">
             <img class="pageTitle" src="images/subtraction.png" Alt="Subtraction">
-            <table>
+            <table class="btnRadio">
                 <tr>
-                    <th><a href="construction.html" class="btn"><p>1st Grade</p>
-                        <img class="btnIcon" src="images/1stGradeSubtract.png" alt="First Grade Subtraction"></a>
+                    <th><input type="radio" name="grades" id="firstGrade">
+                        <label for="firstGrade" class="btn">
+                        1st Grade
+                        <img class="btnIcon" src="images/1stGradeSubtract.png" alt="First Grade Subtraction"></label>
                     </th>
-                    <th><a href="construction.html" class="btn"><p>2nd Grade</p>
-                        <img class="btnIcon" src="images/2ndGradeSubtract.png" alt="Second Grade Subtraction"></a>
+                    <th><input type="radio" name="grades" id="secondGrade">
+                        <label for="secondGrade" class="btn">
+                        2nd Grade
+                        <img class="btnIcon" src="images/2ndGradeSubtract.png" alt="Second Grade Subtraction">
+                        </label>
                     </th>
-                    <th><a href="construction.html" class="btn"><p>3rd Grade</p>
-                        <img class="btnIcon" src="images/3rdGradeSubtract.png" alt="Third Grade Subtraction"></a>
+                    <th><input type="radio" name="grades" id="thirdGrade">
+                        <label for="thirdGrade" class="btn">
+                        3rd Grade
+                        <img class="btnIcon" src="images/3rdGradeSubtract.png" alt="Third Grade Subtraction">
+                        </label>
+                    </th>
+                    <th id="gamePlay">
+                        <table>
+                            <tr>
+                                <th id="problem1">?</th>
+                            </tr>
+                            <tr>
+                                <th id="operator">+</th>
+                                <th id="problem2">?</th>
+                            </tr>
+                            <tr>
+                                <th><input id="userAnswer" type="number">
+                                    <div id="answerArea">
+                                        <input type="submit" id="answerBtn">
+                                        <p id="feedbackOutput"></p>
+                                    </div>
+                                </th>
+                            </tr>
+                        </table>
                     </th>
                 </tr>
             </table>
+            <footer>Copyright &copy; 2017 Kids Web Games</footer>
         </div>
-        <footer>Copyright &copy; 2017 Kids Web Games</footer>
     </div>
-
 </body>
 </html>
