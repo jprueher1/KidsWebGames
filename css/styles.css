@@ -15,7 +15,8 @@
 }
 
 #feedbackOutput {
-    font-size: 35px;
+    font-size: 30px;
+    padding: 0px;
 }
 
 #gamePlay {
@@ -96,9 +97,6 @@
 }
 
 .btnIcon {
-    position: relative;
-    top: 0px;
-    bottom: 0px;
     max-width: 75%;  
 }
 
@@ -183,13 +181,20 @@ nav {
     text-align: center;
 }
 
+span {
+    position: absolute;
+    top: 25px;
+    left: 0px;
+    right: 0px;
+}
+
 table {
     margin: 0 auto;
+    position: relative;
 }
 
 th {
     display:inline-block;
-    padding: 5px;
 }
 
 th input[type="radio"]:checked+label {
