@@ -3,6 +3,7 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
+// Checks user guess against actual answer value, returns true/false.
 function checkAnswer(guess, answer) {
     if(answer == guess) {
         return true;
@@ -11,14 +12,18 @@ function checkAnswer(guess, answer) {
     }
 }
 
+// Gets the next addition problem.
 function getNextProblem(){
+    // Generate random numbers for problem
     firstNum = getRandomInt(min, max);
     secondNum = getRandomInt(min,max);
     
+    // Display numbers to user.
     num1.innerHTML = firstNum;
     num2.innerHTML = secondNum;
 }
 
+// Initialize variables.
 var currentScore = 0;
 var question1 = 0;
 var question2 = 0;
@@ -45,11 +50,8 @@ firstGradeRadio.onchange = function() {
         min = 0;
         max = 10;
         
-        firstNum = getRandomInt(min, max);
-        secondNum = getRandomInt(min, max);
+        getNextProblem();
         
-        num1.innerHTML = firstNum;
-        num2.innerHTML = secondNum;
     }
 }
 
@@ -58,11 +60,7 @@ secondGradeRadio.onchange = function() {
         min = 10;
         max = 100;
         
-        firstNum = getRandomInt(min, max);
-        secondNum = getRandomInt(min, max);
-        
-        num1.innerHTML = firstNum;
-        num2.innerHTML = secondNum;
+        getNextProblem();
     }
 }
 
@@ -71,29 +69,27 @@ thirdGradeRadio.onchange = function() {
         min = 100;
         max = 1000;
         
-        firstNum = getRandomInt(min, max);
-        secondNum = getRandomInt(min, max);
+        getNextProblem();
         
-        num1.innerHTML = firstNum;
-        num2.innerHTML = secondNum;
-    
     }
 }
     
 answerBtn.onclick = function(e){ 
     
+    // Get the user's guess and store it in userGuess.
     userGuess = Number(document.getElementById("userAnswer").value);
+    // Calculate the answer.
     answer = firstNum + secondNum;
     
-    console.log(answer);
-   if(checkAnswer(userGuess, answer)) {
-       output.innerHTML = correctAnswerMsg[getRandomInt(0, correctAnswerMsg.length -1)]
-       currentScore+= 10;
-       getNextProblem();
-   } else {
-       output.innerHTML = wrongAnswerMsg[0, wrongAnswerMsg.length -1];
-   }
-    inputArea.innerHTML = "";
+    if(checkAnswer(userGuess, answer)) {
+        output.innerHTML = correctAnswerMsg[getRandomInt(0, correctAnswerMsg.length -1)]
+        currentScore+= 10;
+        getNextProblem();
+    } else {
+        output.innerHTML = wrongAnswerMsg[0, wrongAnswerMsg.length -1];
+    }
+    // Reset the input area to empty string.
+    inputArea.value = "";
     
 }   
     

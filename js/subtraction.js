@@ -3,6 +3,7 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
+// Checks user's guess against calculated answer. Returns true or false
 function checkAnswer(guess, answer) {
     if(answer == guess) {
         return true;
@@ -11,15 +12,18 @@ function checkAnswer(guess, answer) {
     }
 }
 
+// Gets the next subtraction problem
 function getNextProblem(){
     firstNum = getRandomInt(min, max);
     secondNum = getRandomInt(min,max);
     
-    
+    // While the first number is smaller than second number
+        // Generate new second number.
     while(firstNum < secondNum) {
         secondNum = getRandomInt(min,max);
     }
     
+    // Display problem to user.
     num1.innerHTML = firstNum;
     num2.innerHTML = secondNum;
 }
@@ -46,6 +50,7 @@ var output = document.getElementById("feedbackOutput");
 var correctAnswerMsg = ["Awesome!", "You're really good at this!", "Wonderful!", "You sure                          know your math"];
 var wrongAnswerMsg = ["Keep trying, you'll get it", "So close, try again!", "Think hard,                          you'll get it!"];
 
+// Decide what bounds are depending on grade level and generate a new problem.
 firstGradeRadio.onchange = function() {
     if(firstGradeRadio.checked) {
         min = 0;
@@ -53,8 +58,6 @@ firstGradeRadio.onchange = function() {
         
         getNextProblem();
         
-        num1.innerHTML = firstNum;
-        num2.innerHTML = secondNum;
     }
 }
 
@@ -65,8 +68,6 @@ secondGradeRadio.onchange = function() {
         
         getNextProblem();
         
-        num1.innerHTML = firstNum;
-        num2.innerHTML = secondNum;
     }
 }
 
@@ -77,24 +78,30 @@ thirdGradeRadio.onchange = function() {
         
         getNextProblem();
         
-        num1.innerHTML = firstNum;
-        num2.innerHTML = secondNum;
-    
     }
 }
     
 answerBtn.onclick = function(e){ 
     
+    // Get user guess.
     userGuess = Number(document.getElementById("userAnswer").value);
+    // Calculate correct answer.
     answer = firstNum - secondNum;
     
+    // If the answer was correct
+        // Output correct answer message.
+        // Add to current score.
+        // Get the next problem.
     if(checkAnswer(userGuess, answer)) {
-       output.innerHTML = correctAnswerMsg[getRandomInt(0, correctAnswerMsg.length -1)]
+       output.innerHTML = correctAnswerMsg[getRandomInt(0, correctAnswerMsg.length -1)];
        currentScore+= 10;
        getNextProblem();
+    // Else
+        // Output wrong answer message.
     } else {
-       output.innerHTML = wrongAnswerMsg[0, wrongAnswerMsg.length -1];
+       output.innerHTML = wrongAnswerMsg[getRandomInt(0, wrongAnswerMsg.length -1)];
     }
     
+    // Reset the input area to empty string.
     inputArea.value = "";
 }   
