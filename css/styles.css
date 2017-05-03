@@ -58,6 +58,10 @@
 #title {
     max-width: 100%;
     align-content: center;
+    border-top-right-radius: 35px;
+    border-top-left-radius: 35px;
+    -moz-border-top-right-radius: 35px;
+    -webkit-border-top-left-radius: 35px;
 }
 
 #userAnswer {
@@ -106,7 +110,7 @@
 }
 
 .btnIcon {
-    max-width: 75%;  
+    max-width: 75%;
 }
 
 .btnIcon2 {
@@ -155,7 +159,7 @@
 }
 
 .pageTitle2 {
-    max-height: 185px;
+    max-height: 170px;
 }
 
 a {
@@ -244,6 +248,12 @@ th#problem1.divide {
     left: 25px; 
 }
 
+th#problem1.spelling {
+    position: relative;
+    float: right;
+    right: 2em;
+}
+
 @media only screen and (max-width: 500px) {
     #answerBtn {
         width: 65px;
@@ -288,19 +298,24 @@ th#problem1.divide {
     }
     
     #problem1 {
-    position: relative;
-    right: 1.6em;
-    float: right;
+        position: relative;
+        right: 1.6em;
+        float: right;
     }
     
     #problem2 {
-    position: relative;
-    right: 1.6em;
-    float: right;
+        position: relative;
+        right: 1.6em;
+        float: right;
     }
     
     #title {
-       height: 75px; 
+        height: 100%;
+        width: 100%;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+        -moz-border-top-right-radius: 15px;
+        -webkit-border-top-left-radius: 15px;
     }
     
     .btn {
@@ -323,6 +338,13 @@ th#problem1.divide {
     .pageTitle2 {
         height: 100px;
         max-width: 100%;
+    }
+    
+    footer {
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        -moz-border-bottom-right-radius: 15px;
+        -webkit-border-bottom-left-radius: 15px;
     }
     
     input#userAnswer.divide {
@@ -352,4 +374,10 @@ th#problem1.divide {
     color: #67ba06;
     font-size: 50px;    
     }
+    
+    th#problem1.spelling {
+        position: relative;
+        float: right;
+        right: 2.5em;
+    }  
 }
