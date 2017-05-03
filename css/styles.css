@@ -118,14 +118,11 @@
 
 .btnIcon2 {
     max-width: 50%;
+    float: left;
 }
 
 .btnIcon3 {
     max-width: 100%;
-}
-
-.btnIcon4 {
-    max-width: 40%;
 }
 
 .btnNav {
@@ -371,8 +368,7 @@ th#problem1.spelling {
     
     table.problem {
         table-layout: fixed;
-        width: 180px;
-        
+        width: 180px;  
     }
         
     th {
