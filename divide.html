@@ -17,38 +17,40 @@
             <a href="construction.html" class="btnNav">About Us</a>
         </nav>
         <div id="mainContent">
-            <img class="pageTitle" src="images/subtraction.png" Alt="Subtraction">
+            <img class="pageTitle" src="images/division.png" Alt="Division">
             <table class="btnRadio">
                 <tr>
                     <th><input type="radio" name="grades" id="firstGrade">
                         <label for="firstGrade" class="btn">
-                            <p>1st Grade</p>
-                            <img class="btnIcon" src="images/1stGradeSubtract.png" alt="First Grade Subtraction">
+                            <p>4th Grade</p>
+                            <img class="btnIcon" src="images/4thGradeDivide.png" alt="Fourth Grade Division">
                         </label>
                     </th>
                     <th><input type="radio" name="grades" id="secondGrade">
                         <label for="secondGrade" class="btn">
-                            <p>2nd Grade</p>
-                            <img class="btnIcon" src="images/2ndGradeSubtract.png" alt="Second Grade Subtraction">
+                            <p>5th Grade</p>
+                            <img class="btnIcon" src="images/5thGradeDivide.png" alt="Fifth Grade Division">
                         </label>
                     </th>
                     <th><input type="radio" name="grades" id="thirdGrade">
                         <label for="thirdGrade" class="btn">
-                            <p>3rd Grade</p>
-                            <img class="btnIcon" src="images/3rdGradeSubtract.png" alt="Third Grade Subtraction">
+                            <p>6th Grade</p>
+                            <img class="btnIcon" src="images/6thGradeDivide.png" alt="sixth Grade Division">
                         </label>
                     </th>
                     <th id="gamePlay">
-                        <table>
+                        <table class="problem">
                             <tr>
-                                <th id="problem1">?</th>
+                                <th><input id="userAnswer" Class="divide" type="number">
+                                </th>
                             </tr>
                             <tr>
-                                <th id="operator">-</th>
+                                <th id="problem1" class="divide">?</th>
+                                <th id="operator" class="divide">)</th>
                                 <th id="problem2">?</th>
                             </tr>
                             <tr>
-                                <th><input id="userAnswer" type="number">
+                                <th>
                                     <div id="answerArea">
                                         <input type="submit" id="answerBtn">
                                         <p id="feedbackOutput"></p>
@@ -61,7 +63,7 @@
             </table>
         </div>
         <footer>Copyright &copy; 2017 Kids Web Games</footer>
-        <script src="js/subtraction.js"></script>
+        <script src="js/addition.js"></script>
     </div>
 </body>
 </html>

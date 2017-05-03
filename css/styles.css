@@ -16,43 +16,43 @@
 
 #feedbackOutput {
     font-size: 30px;
-    padding: 0px;
+    width: 275px;
 }
 
 #gamePlay {
     text-align: center;
-    margin: 0 auto;
-    height: 500px;
-    width: 300px;
+    height: 475px;
+    width: 312px;
 }
 
 #mainContent {
-    background-color: blue;
+    background-color: #0000FF;
     color: #FFFFFF;
     padding: 10px;
     text-align: center;
 }
 
-#problem1, #problem2, #operator {
+#operator, #problem1, #problem2 {
     font-size: 65px;  
+}
+
+#operator {
+    position: relative;
+    float: left;
+    left: .35em;
+    color: #67ba06;
 }
 
 #problem1 {
     position: relative;
-    right: 25px;
+    right: .7em;
     float: right;
 }
 
 #problem2 {
     position: relative;
-    right: 25px;
+    right: .7em;
     float: right;
-}
-
-#operator {
-    float: left;
-    left: 25px;
-    color: #67ba06;
 }
 
 #title {
@@ -63,20 +63,29 @@
 #userAnswer {
     width: 240px;
     height: 100px;
-    border-radius: 5px;
     font-size: 72px;
     border-top: 10px solid #67ba06;
     text-align: right;
     font-size: 63px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
 }
 
 #wrapper {   
     margin-left: auto;
 	margin-right: auto;
-    background-color: aquamarine;
 	width: 95%;
 	min-width: auto;
-	box-shadow: 10px 10px 10px #000000;  
+	box-shadow: 10px 10px 10px #000000;
+    border-top-right-radius: 35px;
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+    -moz-border-top-right-radius: 35px;
+    -moz-border-bottom-right-radius: 35px;
+	-webkit-border-top-left-radius: 35px;
+    -webkit-border-bottom-left-radius: 35px;
 }
 
 .btn {
@@ -91,9 +100,9 @@
     margin: 5px 5px;
     max-width: 250px;
     height: 250px;
+    border-radius: 15px;
     -moz-border-radius: 15px;
 	-webkit-border-radius: 15px;
-	border-radius: 15px;
 }
 
 .btnIcon {
@@ -114,19 +123,18 @@
 
 .btnNav {
     background-color: #FF2E2E;
-    border: none;
     font-weight: 700;
     color: #FFFFFF;
     padding: 25px 25px;
     width: 150px;
-    text-align:center;
+    text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 25px;
     margin: 5px 5px;
+    border-radius: 15px;
     -moz-border-radius: 15px;
 	-webkit-border-radius: 15px;
-	border-radius: 15px;
 }
 
 .btnNav:hover {
@@ -136,7 +144,6 @@
 .btnRadio input[type=radio] {
   display: none;
 }
-
 
 .btnRadio label:hover{
     background-color: #FFA500;
@@ -151,8 +158,12 @@
     max-height: 185px;
 }
 
+a {
+    color: #FFFFFF
+}
+
 body {
-    background-color: #00ffff;
+    background-color: #00FFFF;
     padding-top: 20px;
     padding-bottom: 30px;  
 }
@@ -162,17 +173,34 @@ footer {
     color: #FFFFFF;
     text-align: center;
     padding: 10px;
+    border-bottom-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+    -moz-border-bottom-right-radius: 35px;
+	-webkit-border-bottom-left-radius: 35px;
 }
 
 header { 
     background-image: url(../images/titleBackground.png);
     background-position: center;
     text-align: center;
-    height: auto;  
+    height: auto;
+    border-top-right-radius: 35px;
+    border-top-left-radius: 35px;
+    -moz-border-top-right-radius: 35px;
+	-webkit-border-top-left-radius: 35px;
 }
 
 html * {
    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+input#userAnswer.divide {
+    position: relative;
+    left: .5em;
+    width: 175px;
+    float: right;
+    border-top: none;
+    border-bottom: 10px solid #67ba06;
 }
 
 nav {
@@ -181,24 +209,39 @@ nav {
     text-align: center;
 }
 
-span {
-    position: absolute;
-    top: 25px;
-    left: 0px;
-    right: 0px;
+table {
+    position: relative;
+    margin: 0 auto;    
 }
 
-table {
-    margin: 0 auto;
+table.problem {
     position: relative;
+    table-layout: fixed;
+    width: 300px;
 }
 
 th {
     display:inline-block;
+    vertical-align: top;
 }
 
 th input[type="radio"]:checked+label {
-    border: 5px solid white;  
+    border: 5px solid #FFFFFF;  
+}
+
+th#operator.divide {
+    position: absolute;
+    float: left;
+    left: .9em;
+    top: .85em;
+    color: #67ba06;
+    font-size: 100px;    
+}
+
+th#problem1.divide {
+    position: relative;
+    float: left;
+    left: 25px; 
 }
 
 @media only screen and (max-width: 500px) {
@@ -216,11 +259,12 @@ th input[type="radio"]:checked+label {
     
     #feedbackOutput {
         font-size: 15px;
+        width: 150px;
     }
     
     #userAnswer {
         border-top: 5px solid #67ba06;  
-        width: 150px;
+        width: 100px;
         height: 50px;
         font-size: 25px;
     }
@@ -232,14 +276,27 @@ th input[type="radio"]:checked+label {
         width: 180px;
     }
     
+    #operator, #problem1, #problem2 {
+        font-size: 30px;
+    }
+    
     #operator {
+        position: relative;
         float: left;
-        left: 25px;
+        left: 1.2em;
         color: #67ba06;
     }
     
-    #problem1, #problem2, #operator {
-        font-size: 25px;
+    #problem1 {
+    position: relative;
+    right: 1.6em;
+    float: right;
+    }
+    
+    #problem2 {
+    position: relative;
+    right: 1.6em;
+    float: right;
     }
     
     #title {
@@ -268,12 +325,31 @@ th input[type="radio"]:checked+label {
         max-width: 100%;
     }
     
+    input#userAnswer.divide {
+        left: .45em;
+        width: 85px;
+        height: 50px;
+        font-size: 25px;
+    }
     nav {
         padding: 10px;
         text-align: center;
     }
+    
+    table.problem {
+        table-layout: fixed;
+        width: 180px;
+        
+    }
         
     th {
         padding: 0px;
+    }
+    
+    th#operator.divide {
+    left: 1.09em;
+    top: .89em;
+    color: #67ba06;
+    font-size: 50px;    
     }
 }
