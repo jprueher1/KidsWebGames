@@ -232,6 +232,14 @@ th {
     vertical-align: top;
 }
 
+th#gamePlay.divide {
+    display: none;
+}
+
+th#gamePlay.multi {
+    display: none;
+}
+
 th input[type="radio"]:checked+label {
     border: 5px solid #FFFFFF;
 }
@@ -372,10 +380,10 @@ th#problem1.spelling {
     }
     
     th#operator.divide {
-    left: 1.09em;
-    top: .89em;
-    color: #67ba06;
-    font-size: 50px;    
+        left: 1.09em;
+        top: .89em;
+        color: #67ba06;
+        font-size: 50px;    
     }
     
     th#problem1.spelling {
