@@ -26,8 +26,8 @@ function getNextProblem() {
 
 // Initialize variables
 var currentScore = 0;
-var num1 = document.getElementById("problem1");
-var num2 = document.getElementById("problem2");
+var num1 = document.getElementById("problem2");
+var num2 = document.getElementById("problem1");
 var firstNum = 0;
 var secondNum = 0;
 var firstGradeRadio = document.querySelector("#firstGrade");
