@@ -94,7 +94,7 @@
 
 .btn {
     position: relative;
-    background-color: #E86900;
+    background-color: #fe6a00;
     color: #FFFFFF;
     padding: 25px 25px;
     text-align: center;
@@ -102,13 +102,16 @@
     display: inline-block;
     font-size: 25px;
     margin: 5px 5px;
-    max-width: 250px;
+    width: 250px;
     height: 250px;
     border-radius: 15px;
     -moz-border-radius: 15px;
 	-webkit-border-radius: 15px;
 }
 
+.btn:hover {
+    background-color: #FFA500;
+}
 .btnIcon {
     max-width: 75%;
 }
@@ -230,7 +233,7 @@ th {
 }
 
 th input[type="radio"]:checked+label {
-    border: 5px solid #FFFFFF;  
+    border: 5px solid #FFFFFF;
 }
 
 th#operator.divide {
