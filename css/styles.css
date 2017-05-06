@@ -1,26 +1,25 @@
-#answerArea {
+#answerArea, #answerAreaDivide {
     padding: 10px;
 }
 
-#answerBtn {
+#answerBtn, #answerBtnDivide {
     width: 100px;
     height: 50px;
     font-size: 25px;
 }
 
-#answerBtn:hover {
+#answerBtn:hover, #answerBtnDivide:hover {
     width: 105px;
     height: 55px;
     font-size: 25px;
 }
 
-#feedbackOutput {
+#feedbackOutput, #feedbackOutputDivide  {
     font-size: 30px;
     width: 275px;
 }
 
 #gamePlay {
-    text-align: center;
     height: 475px;
     width: 312px;
 }
@@ -32,7 +31,7 @@
     text-align: center;
 }
 
-#operator, #problem1, #problem2 {
+#operator, #problem1, #problem2, #problem3, #problem4 {
     font-size: 65px;  
 }
 
@@ -49,7 +48,7 @@
     float: right;
 }
 
-#problem2 {
+#problem2, #problem3 {
     position: relative;
     right: .7em;
     float: right;
@@ -64,7 +63,7 @@
     -webkit-border-top-left-radius: 35px;
 }
 
-#userAnswer {
+#userAnswer, input#userAnswerDivide {
     width: 240px;
     height: 100px;
     font-size: 72px;
@@ -77,10 +76,9 @@
 }
 
 #wrapper {   
-    margin-left: auto;
-	margin-right: auto;
+    margin: 0 auto;
 	width: 95%;
-	min-width: auto;
+	min-width: 200px;
 	box-shadow: 10px 10px 10px #000000;
     border-top-right-radius: 35px;
     border-top-left-radius: 35px;
@@ -90,6 +88,10 @@
     -moz-border-bottom-right-radius: 35px;
 	-webkit-border-top-left-radius: 35px;
     -webkit-border-bottom-left-radius: 35px;
+}
+
+.about {
+    font-size: 30px;
 }
 
 .btn {
@@ -198,10 +200,11 @@ html * {
    font-family: Arial, Helvetica, sans-serif !important;
 }
 
-input#userAnswer.divide {
+input#userAnswer.divide, input#userAnswerDivide {
     position: relative;
     left: .5em;
     width: 175px;
+    font-size: 72px;
     float: right;
     border-top: none;
     border-bottom: 10px solid #67ba06;
@@ -229,6 +232,8 @@ th {
     vertical-align: top;
 }
 
+<<<<<<< HEAD
+=======
 
 
 /* Josh commented this out... taken care of in JS
@@ -241,11 +246,12 @@ th#gamePlay.multi {
 }
 */
 
+>>>>>>> bc32d68f355498467c320cf074ae2e1ac7c54064
 th input[type="radio"]:checked+label {
     border: 5px solid #FFFFFF;
 }
 
-th#operator.divide {
+th#operator.divide, th#operatorDivide {
     position: absolute;
     float: left;
     left: .9em;
@@ -254,26 +260,27 @@ th#operator.divide {
     font-size: 100px;    
 }
 
-th#problem1.divide {
+th#problem1.divide, th#problem4 {
     position: relative;
     float: left;
     left: 25px; 
 }
 
-th#problem1.spelling {
+div#problem1.spelling, div#problem1.spelling{
     position: relative;
-    float: right;
-    right: 2em;
+    left: 0%;
+    right: 0%;
+    font-size: 50px;
 }
 
 @media only screen and (max-width: 500px) {
-    #answerBtn {
+    #answerBtn, #answerBtnDivide {
         width: 65px;
         height: 25px;
         font-size: 15px;
     }
 
-    #answerBtn:hover {
+    #answerBtn:hover, #answerBtnDivide:hover{
         width: 70px;
         height: 30px;
         font-size: 15px;
@@ -298,7 +305,7 @@ th#problem1.spelling {
         width: 180px;
     }
     
-    #operator, #problem1, #problem2 {
+    #operator, #problem1, #problem2, #problem3, #problem4{
         font-size: 30px;
     }
     
@@ -359,7 +366,7 @@ th#problem1.spelling {
         -webkit-border-bottom-left-radius: 15px;
     }
     
-    input#userAnswer.divide {
+    input#userAnswer.divide, input#userAnswerDivide {
         left: .45em;
         width: 85px;
         height: 50px;
@@ -379,7 +386,7 @@ th#problem1.spelling {
         padding: 0px;
     }
     
-    th#operator.divide {
+    th#operator.divide, th#operatorDivide {
         left: 1.09em;
         top: .89em;
         color: #67ba06;
