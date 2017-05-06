@@ -229,6 +229,9 @@ th {
     vertical-align: top;
 }
 
+
+
+/* Josh commented this out... taken care of in JS
 th#gamePlay.divide {
     display: none;
 }
@@ -236,6 +239,7 @@ th#gamePlay.divide {
 th#gamePlay.multi {
     display: none;
 }
+*/
 
 th input[type="radio"]:checked+label {
     border: 5px solid #FFFFFF;

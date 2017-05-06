@@ -57,8 +57,8 @@ firstGradeRadio.onchange = function() {
 
 secondGradeRadio.onchange = function() {
     if(secondGradeRadio.checked) {
-        min = 10;
-        max = 100;
+        min = -10;
+        max = 0;
         min2 = 1;
         max2 = 10;
         

@@ -17,9 +17,11 @@ function getNextMultiplicationProblem(){
     firstNum = getRandomInt(min, max);
     secondNum = getRandomInt(min2,max2);
     
-    operator.innerHTML = "x";
+    
     num1.innerHTML = firstNum;
     num2.innerHTML = secondNum;
+    multiplicationArea.style.display = "";
+    divisionArea.style.display = "none";
 }
 
 // Gets next division problem
@@ -29,13 +31,13 @@ function getNextDivisionProblem() {
     firstNum = firstNum * secondNum;
     
     
-    while(firstNum < secondNum) {
-        secondNum = getRandomInt(min,max);
-    }
+    firstNum*= secondNum;
     
-    operator.innerHTML = "%";
-    num1.innerHTML = firstNum;
-    num2.innerHTML = secondNum;
+    //operator.innerHTML = "%";
+    num3.innerHTML = firstNum;
+    num4.innerHTML = secondNum;
+    multiplicationArea.style.display = "none";
+    divisionArea.style.display = "";
 }
 
 // initialize variables
@@ -46,6 +48,8 @@ var min2;
 var max2;
 var num1 = document.getElementById("problem1");
 var num2 = document.getElementById("problem2");
+var num3 = document.getElementById("problem3");
+var num4 = document.getElementById("problem4");
 var firstNum = 0;
 var secondNum = 0;
 var operator = document.querySelector("#operator");
@@ -54,14 +58,21 @@ var secondGradeRadio = document.querySelector("#secondGrade");
 var thirdGradeRadio = document.querySelector("#thirdGrade");
 var answer = 0;
 var answerBtn = document.getElementById("answerBtn");
+var answerBtnDivide = document.getElementById("answerBtnDivide");
 var userGuess = 0;
 var questionNum = 1;
 var inputArea = document.getElementById("userAnswer");
+var inputAreaDivide = document.getElementById("userAnswerDivide");
 var output = document.getElementById("feedbackOutput");
+var multiplicationArea = document.querySelector("th#gamePlay.multi");
+var divisionArea = document.querySelector("th#gamePlay.divide");
 
-var correctAnswerMsg = ["Awesome!", "You're really good at this!", "Wonderful!", "You sure                          know your math"];
-var wrongAnswerMsg = ["Keep trying, you'll get it", "So close, try again!", "Think hard,                          you'll get it!"];
+var correctAnswerMsg = ["Awesome!", "You're really good at this!", "Wonderful!", "You sure know your math"];
+var wrongAnswerMsg = ["Keep trying, you'll get it", "So close, try again!", "Think hard, you'll get it!"];
 
+
+multiplicationArea.style.display = "none";
+divisionArea.style.display = "none";
 // Changes values depending on which grade level is selected
 firstGradeRadio.onchange = function() {
     if(firstGradeRadio.checked) {
@@ -70,7 +81,7 @@ firstGradeRadio.onchange = function() {
         min2 = 1;
         max2 = 10;
         
-        if(questionNum % 2) {
+        if(questionNum % 2 || questionNum == 0) {
             getNextMultiplicationProblem();
         } else {
             getNextDivisionProblem();
@@ -85,7 +96,7 @@ secondGradeRadio.onchange = function() {
         min2 = 1;
         max2 = 10;
         
-        if(questionNum % 2) {
+        if(questionNum % 2 || questionNum == 0) {
             getNextMultiplicationProblem();
         } else {
             getNextDivisionProblem();
@@ -100,7 +111,7 @@ thirdGradeRadio.onchange = function() {
         min2 = 1;
         max2 = 10;
         
-        if(questionNum % 2) {
+        if(questionNum % 2 || questionNum == 0) {
             getNextMultiplicationProblem();
         } else {
             getNextDivisionProblem();
@@ -111,10 +122,10 @@ thirdGradeRadio.onchange = function() {
 answerBtn.onclick = function(e){ 
     
     // Get users guess
-    userGuess = Number(document.getElementById("userAnswer").value);
+    userGuess = Number(inputArea.value);
     
     // Figure answer depending if multiplication or division problem.
-    if(questionNum % 2) {
+    if(questionNum % 2 || questionNum) {
         answer = firstNum * secondNum;
     } else {
         answer = firstNum / secondNum;
@@ -130,11 +141,10 @@ answerBtn.onclick = function(e){
         questionNum+= 1;
         
         // Decide if next problem is multiplication or division.
-        if(questionNum % 2) {
-            getNextMultiplicationProblem();
-        } else {
-            getNextDivisionProblem();
-        }
+
+        getNextDivisionProblem();
+
+        
     // Else
         // Output wrong answer message
     } else {
@@ -144,3 +154,35 @@ answerBtn.onclick = function(e){
     inputArea.value = "";
      
 };  
+
+answerBtnDivide.onclick = function(e){ 
+    console.log("hello");
+    // Get users guess
+    userGuess = Number(inputAreaDivide.value);
+    
+    // Figure answer depending if multiplication or division problem.
+        answer = firstNum / secondNum;
+    
+    console.log(answer);
+    // If user is correct
+        // OUtput correct answer message
+        // Add to current score
+        // Add one to question number
+    if(checkAnswer(userGuess, answer)) {
+        output.innerHTML = correctAnswerMsg[getRandomInt(0, correctAnswerMsg.length -1)];
+        currentScore+= 10;
+        questionNum+= 1;
+        
+        // Decide if next problem is multiplication or division.
+        
+        getNextMultiplicationProblem();
+
+    // Else
+        // Output wrong answer message
+    } else {
+       output.innerHTML = wrongAnswerMsg[getRandomInt(0, wrongAnswerMsg.length -1)];
+    }
+    // Reset answer area to empty string.
+    inputArea.value = "";
+     
+};
