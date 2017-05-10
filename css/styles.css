@@ -14,6 +14,10 @@
     font-size: 25px;
 }
 
+#bottomBnr, #topBnr {
+    max-width: 100%;
+}
+
 #feedbackOutput, #feedbackOutputDivide  {
     font-size: 30px;
     width: 275px;
@@ -22,6 +26,25 @@
 #gamePlay {
     height: 475px;
     width: 312px;
+}
+
+#leftBnr, #topBnr, #rightBnr, #bottomBnr {
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+#leftBnr {
+    float: left;
+    max-width: 100%;
+}
+
+#leftBnrs, #rightBnrs {
+    position: relative;
+}
+
+#leftBnr.link, #rightBnr.link {
+    max-width: 250px;
 }
 
 #mainContent {
@@ -54,6 +77,11 @@
     float: right;
 }
 
+#rightBnr {
+    float: right;
+    max-width: 100%;
+}
+
 #title {
     max-width: 100%;
     align-content: center;
@@ -77,7 +105,7 @@
 
 #wrapper {   
     margin: 0 auto;
-	width: 95%;
+	width: 90%;
 	min-width: 200px;
 	box-shadow: 10px 10px 10px #000000;
     border-top-right-radius: 35px;
@@ -165,7 +193,7 @@
 }
 
 a {
-    color: #FFFFFF
+    color: #FFFFFF;
 }
 
 body {
@@ -258,7 +286,13 @@ th#problem1.divide, th#problem4 {
     left: 25px; 
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 1655px) {
+    #leftBnrs, #rightBnrs{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 530px) {
     #answerBtn, #answerBtnDivide {
         width: 65px;
         height: 25px;
@@ -269,6 +303,10 @@ th#problem1.divide, th#problem4 {
         width: 70px;
         height: 30px;
         font-size: 15px;
+    }
+    
+    #bottomBnr, #topBnr {
+        display: none;
     }
     
     #feedbackOutput {
