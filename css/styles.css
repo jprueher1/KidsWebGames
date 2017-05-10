@@ -14,10 +14,6 @@
     font-size: 25px;
 }
 
-.bottomBnr, .topBnr {
-    max-width: 100%;
-}
-
 #feedbackOutput, #feedbackOutputDivide  {
     font-size: 30px;
     width: 275px;
@@ -28,30 +24,12 @@
     width: 312px;
 }
 
-.leftBnr, .topBnr, .rightBnr, .bottomBnr {
-    border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-}
-
-.leftBnr {
-    float: left;
-    max-width: 100%;
-}
-
-.leftBnrs, .rightBnrs {
-    position: relative;
-}
-
-a.leftBnr, a.rightBnr {
-    max-width: 250px;
-}
-
 #mainContent {
     background-color: #0000FF;
     color: #FFFFFF;
     padding: 10px;
     text-align: center;
+    overflow: hidden;
 }
 
 #operator, #problem1, #problem2, #problem3, #problem4 {
@@ -77,11 +55,6 @@ a.leftBnr, a.rightBnr {
     float: right;
 }
 
-.rightBnr {
-    float: right;
-    max-width: 100%;
-}
-
 #title {
     max-width: 100%;
     align-content: center;
@@ -103,7 +76,7 @@ a.leftBnr, a.rightBnr {
     -webkit-border-radius: 5px;
 }
 
-#wrapper {   
+#wrapper {
     margin: 0 auto;
 	width: 90%;
 	min-width: 200px;
@@ -120,6 +93,10 @@ a.leftBnr, a.rightBnr {
 
 .about {
     font-size: 30px;
+}
+
+.bottomBnr, .topBnr {
+    max-width: 100%;
 }
 
 .btn {
@@ -184,12 +161,30 @@ a.leftBnr, a.rightBnr {
     cursor: pointer;
 }
 
+.leftBnr, .topBnr, .rightBnr, .bottomBnr {
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+div.leftBnrs {
+    float: left;
+}
+
+.leftBnr, .rightBnr {
+    max-width: 100%;
+}
+
 .pageTitle {
     height: 85px;
 }
 
 .pageTitle2 {
     max-height: 170px;
+}
+
+.rightBnr {
+    float: right;
 }
 
 a {
@@ -207,6 +202,20 @@ div#problem1.spelling {
     left: 0%;
     right: 0%;
     font-size: 50px;
+}
+
+div.leftBnrs {
+    float: left;
+}
+
+div.leftBnrs, div.rightBnrs {
+    width: 250px;
+    padding: 2em 5px;
+
+}
+
+div.rightBnrs {
+    float: right;
 }
 
 footer {
@@ -253,7 +262,7 @@ nav {
 
 table {
     position: relative;
-    margin: 0 auto;    
+    margin: 0 auto;
 }
 
 table.problem {
@@ -286,10 +295,16 @@ th#problem1.divide, th#problem4 {
     left: 25px; 
 }
 
-@media only screen and (max-width: 1655px) {
-    .leftBnrs, .rightBnrs{
+@media only screen and (max-width: 1680px) {
+    div.leftBnrs, div.rightBnrs {
+        width: 200px;
+    }   
+}
+
+@media only screen and (max-width: 1570px) {
+    div.leftBnrs, div.rightBnrs {
         display: none;
-    }
+    }   
 }
 
 @media only screen and (max-width: 530px) {
@@ -405,7 +420,6 @@ th#problem1.divide, th#problem4 {
     }
     
     table.problem {
-        table-layout: fixed;
         width: 180px;  
     }
         
