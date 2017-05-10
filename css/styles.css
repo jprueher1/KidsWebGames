@@ -14,7 +14,7 @@
     font-size: 25px;
 }
 
-#bottomBnr, #topBnr {
+.bottomBnr, .topBnr {
     max-width: 100%;
 }
 
@@ -28,22 +28,22 @@
     width: 312px;
 }
 
-#leftBnr, #topBnr, #rightBnr, #bottomBnr {
+.leftBnr, .topBnr, .rightBnr, .bottomBnr {
     border-radius: 10px;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
 }
 
-#leftBnr {
+.leftBnr {
     float: left;
     max-width: 100%;
 }
 
-#leftBnrs, #rightBnrs {
+.leftBnrs, .rightBnrs {
     position: relative;
 }
 
-#leftBnr.link, #rightBnr.link {
+a.leftBnr, a.rightBnr {
     max-width: 250px;
 }
 
@@ -77,7 +77,7 @@
     float: right;
 }
 
-#rightBnr {
+.rightBnr {
     float: right;
     max-width: 100%;
 }
@@ -287,7 +287,7 @@ th#problem1.divide, th#problem4 {
 }
 
 @media only screen and (max-width: 1655px) {
-    #leftBnrs, #rightBnrs{
+    .leftBnrs, .rightBnrs{
         display: none;
     }
 }
@@ -305,7 +305,7 @@ th#problem1.divide, th#problem4 {
         font-size: 15px;
     }
     
-    #bottomBnr, #topBnr {
+    .bottomBnr, .topBnr {
         display: none;
     }
     
