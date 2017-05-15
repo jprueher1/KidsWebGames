@@ -132,6 +132,10 @@
     max-width: 100%;
 }
 
+.btnIcon4 {
+    max-width: 60%;
+}
+
 .btnNav {
     background-color: #FF2E2E;
     font-weight: 700;
@@ -252,6 +256,10 @@ input#userAnswer.divide, input#userAnswerDivide {
     float: right;
     border-top: none;
     border-bottom: 10px solid #67ba06;
+}
+
+input#userAnswer.shapeAndColor {
+    font-size: 50px;
 }
 
 nav {
@@ -414,6 +422,11 @@ td#problem1.divide, td#problem4 {
         height: 50px;
         font-size: 25px;
     }
+    
+    input#userAnswer.shapeAndColor {
+        font-size: 20px;
+    }
+    
     nav {
         padding: 10px;
         text-align: center;
