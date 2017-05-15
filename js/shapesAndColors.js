@@ -1,4 +1,4 @@
-function main() {
+function main() {    
 
     // Generates a random integer inclusive of both min and max.
     function getRandomInt(min, max) {
@@ -14,41 +14,36 @@ function main() {
         }
     }
 
-    // Gets the next addition problem.
+    // Gets the next  problem, displays image.
     function getNextProblem(){
-        // Generate random numbers for problem
-        firstNum = getRandomInt(min, max);
-        secondNum = getRandomInt(min,max);
+        // Assign random image to word variable from Array of words for selected grade level.
+        image = images[getRandomInt(0, images.length - 1)];
+        imgDisplay.src = "images/" + image + ".png";
 
-        // Display numbers to user.
-        num1.innerHTML = firstNum;
-        num2.innerHTML = secondNum;
     }
 
     // Initialize variables.
-    var min;
-    var max;
-    var num1 = document.getElementById("problem1");
-    var num2 = document.getElementById("problem2");
-    var firstNum = 0;
-    var secondNum = 0;
+    var imgDisplay = document.getElementById("problem1");
     var firstGradeRadio = document.querySelector("#firstGrade");
     var secondGradeRadio = document.querySelector("#secondGrade");
     var thirdGradeRadio = document.querySelector("#thirdGrade");
-    var answer = 0;
+    var answer = "";
     var answerBtn = document.getElementById("answerBtn");
-    var userGuess = 0;
+    var userGuess = "";
     var inputArea = document.getElementById("userAnswer");
     var output = document.getElementById("feedbackOutput");
+    var image = "";
+    var images = [];
     var correctSound = new Audio("sounds/correct.wav");
 
-    var correctAnswerMsg = ["Awesome!", "You're really good at this!", "Wonderful!", "You sure                          know your math!", "Great Job!"];
-    var wrongAnswerMsg = ["Keep trying, you'll get it", "So close, try again!", "Think hard,                          you'll get it!"];
+
+    var correctAnswerMsg = ["Awesome!", "You're really good at this!", "Wonderful!", "You                          sure know your shapes and colors!", "Great job!", "Super!"];
+    var wrongAnswerMsg = ["Keep trying, you'll get it", "So close, try again!", "Think                            hard, you'll get it!"];
 
     firstGradeRadio.onchange = function() {
         if(firstGradeRadio.checked) {
-            min = 0;
-            max = 10;
+
+            images = ["red", "orange", "yellow", "green", "blue", "black", "brown"];
 
             getNextProblem();
 
@@ -57,8 +52,7 @@ function main() {
 
     secondGradeRadio.onchange = function() {
         if(secondGradeRadio.checked) {
-            min = 10;
-            max = 100;
+            images = ["square", "triangle", "rectangle", "hexagon", "circle", "pentagon"];
 
             getNextProblem();
         }
@@ -66,8 +60,7 @@ function main() {
 
     thirdGradeRadio.onchange = function() {
         if(thirdGradeRadio.checked) {
-            min = 100;
-            max = 1000;
+            images = [];
 
             getNextProblem();
 
@@ -77,10 +70,16 @@ function main() {
     answerBtn.onclick = function(e){ 
 
         // Get the user's guess and store it in userGuess.
-        userGuess = Number(document.getElementById("userAnswer").value);
+        userGuess = document.getElementById("userAnswer").value.toLowerCase();
         // Calculate the answer.
-        answer = firstNum + secondNum;
+        answer = image;
 
+        // IF userGuess equals answer
+            //  Display correct answer message.
+            //  Play correct answer sound.
+            //  Get the next problem.
+        // ELSE
+            // Display wrong answer message.
         if(checkAnswer(userGuess, answer)) {
             output.innerHTML = correctAnswerMsg[getRandomInt(0, correctAnswerMsg.length -1)];
             correctSound.play();
@@ -91,14 +90,7 @@ function main() {
         // Reset the input area to empty string.
         inputArea.value = "";
 
-    };   
+    };  
 
 }
 main();
-
-
-
-
-
-
-
