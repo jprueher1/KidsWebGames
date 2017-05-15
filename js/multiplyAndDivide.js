@@ -64,6 +64,7 @@ function main() {
     var inputArea = document.getElementById("userAnswer");
     var inputAreaDivide = document.getElementById("userAnswerDivide");
     var output = document.getElementById("feedbackOutput");
+    var outputDivide = document.getElementById("feedbackOutputDivide");
     var multiplicationArea = document.querySelector("th#gamePlay.multi");
     var divisionArea = document.querySelector("th#gamePlay.divide");
     var correctSound = new Audio("sounds/correct.wav");
@@ -137,7 +138,7 @@ function main() {
             // Add to current score
             // Add one to question number
         if(checkAnswer(userGuess, answer)) {
-            output.innerHTML = correctAnswerMsg[getRandomInt(0, correctAnswerMsg.length -1)];
+            outputDivide.innerHTML = correctAnswerMsg[getRandomInt(0, correctAnswerMsg.length -1)];
             correctSound.play();
             questionNum+= 1;
 
@@ -149,7 +150,7 @@ function main() {
         // Else
             // Output wrong answer message
         } else {
-           output.innerHTML = wrongAnswerMsg[getRandomInt(0, wrongAnswerMsg.length -1)];
+           outputDivide.innerHTML = wrongAnswerMsg[getRandomInt(0, wrongAnswerMsg.length -1)];
         }
         // Reset answer area to empty string.
         inputArea.value = "";
@@ -184,7 +185,7 @@ function main() {
            output.innerHTML = wrongAnswerMsg[getRandomInt(0, wrongAnswerMsg.length -1)];
         }
         // Reset answer area to empty string.
-        inputArea.value = "";
+        inputAreaDivide.value = "";
 
     };
 
