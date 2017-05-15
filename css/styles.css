@@ -271,16 +271,16 @@ table.problem {
     width: 300px;
 }
 
-th {
+td {
     display:inline-block;
     vertical-align: top;
 }
 
-th input[type="radio"]:checked+label {
+td input[type="radio"]:checked+label {
     border: 5px solid #FFFFFF;
 }
 
-th#operator.divide, th#operatorDivide {
+td#operator.divide, td#operatorDivide {
     position: absolute;
     float: left;
     left: .9em;
@@ -289,7 +289,7 @@ th#operator.divide, th#operatorDivide {
     font-size: 100px;    
 }
 
-th#problem1.divide, th#problem4 {
+td#problem1.divide, td#problem4 {
     position: relative;
     float: left;
     left: 25px; 
@@ -423,18 +423,18 @@ th#problem1.divide, th#problem4 {
         width: 180px;  
     }
         
-    th {
+    td {
         padding: 0px;
     }
     
-    th#operator.divide, th#operatorDivide {
+    td#operator.divide, td#operatorDivide {
         left: 1.09em;
         top: .89em;
         color: #67ba06;
         font-size: 50px;    
     }
     
-    th#problem1.spelling {
+    td#problem1.spelling {
         position: relative;
         float: right;
         right: 2.5em;
