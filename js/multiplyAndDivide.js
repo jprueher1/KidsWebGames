@@ -65,8 +65,8 @@ function main() {
     var inputAreaDivide = document.getElementById("userAnswerDivide");
     var output = document.getElementById("feedbackOutput");
     var outputDivide = document.getElementById("feedbackOutputDivide");
-    var multiplicationArea = document.querySelector("th#gamePlay.multi");
-    var divisionArea = document.querySelector("th#gamePlay.divide");
+    var multiplicationArea = document.querySelector("#gamePlay.multi");
+    var divisionArea = document.querySelector("#gamePlay.divide");
     var correctSound = new Audio("sounds/correct.wav");
 
     var correctAnswerMsg = ["Awesome!", "You're really good at this!", "Wonderful!", "You sure know your math"];
@@ -97,7 +97,7 @@ function main() {
             max = 100;
             min2 = 1;
             max2 = 10;
-
+            console.log("hello");
             if(questionNum % 2 || questionNum == 0) {
                 getNextMultiplicationProblem();
             } else {
