@@ -26,7 +26,6 @@ function main() {
     var imgDisplay = document.getElementById("problem1");
     var firstGradeRadio = document.querySelector("#firstGrade");
     var secondGradeRadio = document.querySelector("#secondGrade");
-    var thirdGradeRadio = document.querySelector("#thirdGrade");
     var answer = "";
     var answerBtn = document.getElementById("answerBtn");
     var userGuess = "";
@@ -55,15 +54,6 @@ function main() {
             images = ["square", "triangle", "rectangle", "hexagon", "circle", "pentagon"];
 
             getNextProblem();
-        }
-    };
-
-    thirdGradeRadio.onchange = function() {
-        if(thirdGradeRadio.checked) {
-            images = [];
-
-            getNextProblem();
-
         }
     };
 
