@@ -20,7 +20,7 @@
 }
 
 #gamePlay {
-    height: 475px;
+    height: auto;
     width: 312px;
 }
 
@@ -93,6 +93,9 @@
 
 .about {
     font-size: 30px;
+    max-width: 80%;
+    margin: 25px auto;
+    text-align: left;
 }
 
 .bottomBnr, .topBnr {
@@ -130,10 +133,6 @@
 
 .btnIcon3 {
     max-width: 100%;
-}
-
-.btnIcon4 {
-    max-width: 60%;
 }
 
 .btnNav {
@@ -215,7 +214,6 @@ div.leftBnrs {
 div.leftBnrs, div.rightBnrs {
     width: 250px;
     padding: 2em 5px;
-
 }
 
 div.rightBnrs {
@@ -347,7 +345,7 @@ td#problem1.divide, td#problem4 {
     #gamePlay {
         text-align: center;
         margin: 0 auto;
-        height: 218px;
+        height: auto;
         width: 180px;
     }
     
