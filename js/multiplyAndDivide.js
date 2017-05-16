@@ -150,7 +150,7 @@ function main() {
         // Else
             // Output wrong answer message
         } else {
-           outputDivide.innerHTML = wrongAnswerMsg[getRandomInt(0, wrongAnswerMsg.length -1)];
+           output.innerHTML = wrongAnswerMsg[getRandomInt(0, wrongAnswerMsg.length -1)];
         }
         // Reset answer area to empty string.
         inputArea.value = "";
@@ -182,7 +182,7 @@ function main() {
         // Else
             // Output wrong answer message
         } else {
-           output.innerHTML = wrongAnswerMsg[getRandomInt(0, wrongAnswerMsg.length -1)];
+           outputDivide.innerHTML = wrongAnswerMsg[getRandomInt(0, wrongAnswerMsg.length -1)];
         }
         // Reset answer area to empty string.
         inputAreaDivide.value = "";
