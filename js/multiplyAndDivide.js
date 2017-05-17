@@ -30,12 +30,16 @@ function main() {
     function getNextDivisionProblem() {
         firstNum = getRandomInt(min, max);
         secondNum = getRandomInt(min2,max2);
-        firstNum = firstNum * secondNum;
+        while(secondNum === 0) {
+            secondNum = getRandomInt(min2, max2);
+        }
+        
+        if(secondNum > 0) {
+            firstNum*= secondNum;
+        } else {
+            firstNum = firstNum * (secondNum * -1);
+        }
 
-
-        firstNum*= secondNum;
-
-        //operator.innerHTML = "%";
         num3.innerHTML = firstNum;
         num4.innerHTML = secondNum;
         multiplicationArea.style.display = "none";
@@ -94,10 +98,10 @@ function main() {
     secondGradeRadio.onchange = function() {
         if(secondGradeRadio.checked) {
             min = 10;
-            max = 100;
-            min2 = 1;
+            max = 20;
+            min2 = -10;
             max2 = 10;
-            console.log("hello");
+            
             if(questionNum % 2 || questionNum == 0) {
                 getNextMultiplicationProblem();
             } else {
@@ -110,7 +114,7 @@ function main() {
         if(thirdGradeRadio.checked) {
             min = 10;
             max = 100;
-            min2 = 1;
+            min2 = -10;
             max2 = 10;
 
             if(questionNum % 2 || questionNum == 0) {
@@ -158,14 +162,12 @@ function main() {
     };  
 
     answerBtnDivide.onclick = function(e){ 
-        console.log("hello");
         // Get users guess
         userGuess = Number(inputAreaDivide.value);
 
         // Figure answer depending if multiplication or division problem.
             answer = firstNum / secondNum;
 
-        console.log(answer);
         // If user is correct
             // OUtput correct answer message
             // Play correct answer sound.
